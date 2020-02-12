@@ -1,15 +1,31 @@
-import module.ChromeF5;
-import module.IdeaF5;
-import module.WechatF5;
-import module.WindowF5;
+import module.Chrome;
+import module.Idea;
+import module.Wechat;
+import module.Window;
 
 public class Application {
     public static void main(String[] args) {
-        WindowF5 ideaF5 = new IdeaF5();
-        WindowF5 chromeF5 = new ChromeF5();
-        WindowF5 wechatF5 = new WechatF5();
-        ideaF5.pressF5();
-        chromeF5.pressF5();
-        wechatF5.pressF5();
+        Window idea = new Idea();
+        Window chrome = new Chrome();
+        Window wechat = new Wechat();
+
+        method(idea);
+        method(chrome);
+        method(wechat);
+    }
+
+    public static void method(Window window) {
+        if (window instanceof Idea) {
+            Idea idea = (Idea) window;
+            idea.pressF5();
+        }
+        if (window instanceof Chrome) {
+            Chrome chrome = (Chrome) window;
+            chrome.pressF5();
+        }
+        if (window instanceof Wechat) {
+            Wechat wechat = (Wechat) window;
+            wechat.pressF5();
+        }
     }
 }

@@ -1,6 +1,6 @@
 package module;
 
-public class WindowF5 {
+public class Window {
     public void pressF5() {
         System.out.println("刷新");
     }

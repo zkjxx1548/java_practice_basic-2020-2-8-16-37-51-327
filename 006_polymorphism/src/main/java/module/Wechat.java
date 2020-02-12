@@ -1,6 +1,6 @@
 package module;
 
-public class WechatF5 extends WindowF5 {
+public class Wechat extends Window {
     @Override
     public void pressF5() {
         super.pressF5();
